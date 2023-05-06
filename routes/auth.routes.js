@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const authController = require("../controller/authController");
-const authenticateJWT = require("../middleware/authenticateJWT");
+// const authenticateJWT = require("../middleware/authenticateJWT");
 
 const router = Router();
 
@@ -14,6 +14,6 @@ router.use(function (req, res, next) {
 
 router.post("/registration", authController.register);
 router.post("/login", authController.login);
-router.post("/refreshtoken", authenticateJWT, authController.refreshToken);
+router.post("/refreshtoken", authController.refreshToken);
 
 module.exports = router;
