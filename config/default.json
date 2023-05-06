@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://sabyr:123@cluster0.41tt1.mongodb.net/sergek-jashoo?retryWrites=true&w=majority",
+    "ACCESS_TOKEN_SECRET": "ACCESS_TOKEN_0808",
+    "REFRESH_TOKEN_SECRET": "REFRESH_TOKEN_0808"
+}

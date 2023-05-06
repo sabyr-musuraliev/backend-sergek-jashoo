@@ -1,0 +1,41 @@
+POST http://localhost:5000/auth/registration
+content-type: application/json
+
+{
+    "username": "adminkanyke1111",
+    "password": "admin123",
+    "firstname": "Каныкей",
+    "lastname": "Иманалиева"
+}
+
+###
+
+POST http://localhost:5000/auth/login
+content-type: application/json
+
+{
+    "username": "adminkanyke1111",
+    "password": "admin123"
+}
+
+###
+
+POST http://localhost:5000/auth/refreshtoken 
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDI0NjQwMjhjZDE2MzU1ZWUyNTA5ZWYiLCJpYXQiOjE2ODAxMjAxNjQsImV4cCI6MTY4MDEyMTA2NH0.A4yMJi0a1gw5ECRzKKB5NhjgsLVy3Kak29Oh8_ZOFl8
+
+{"refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDI0NjQwMjhjZDE2MzU1ZWUyNTA5ZWYiLCJpYXQiOjE2ODAxMjAxNjR9.yKTwjbkH1B7f-Sf3xNAfkFKO4IREufVkhtbqEkgwex4"}
+###
+PATCH http://localhost:5000/patients/session/625e0515eb779720040fcd19
+
+###
+
+GET http://localhost:5000/patients/searchTag?limit=10&page=1&searchName=sdad
+
+###
+
+GET http://localhost:5000/patients/newsession/625df6b57c8a278900f80615
+
+###
+
+GET http://localhost:5000/roles/createnewroles
