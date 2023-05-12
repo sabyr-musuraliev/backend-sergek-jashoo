@@ -18,14 +18,14 @@ app.use(bodyParser.urlencoded({ limit: "5mb", extended: true }));
 // app.use("/auth", auth);
 app.use("/patients", patients);
 
-const PORT = config.get("port") || 5000;
+const PORT = process.env.PORT || 5000;
 const MONGOURI = config.get("mongoUri");
 
 async function start() {
     try {
         await mongoose.connect(MONGOURI, {});
         app.listen(PORT, () =>
-            console.log(`server is running on port ${PORT}`)
+            console.log(`server is running on port ${PORT}`, process.env.PORT)
         );
     } catch (error) {
         console.log("Server error", error.message);
